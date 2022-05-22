@@ -11,10 +11,27 @@ plugins {
     id 'java-library'
 }
 
+version = '1.0'
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+//create a single Jar with all dependencies
+
+
+
 repositories {
     // Use JCenter for resolving dependencies.
     jcenter()
 }
+
+jar {
+	manifest {
+		attributes 'Main-Class': 'webtech.Main'
+		}
+		
+	} 
 
 dependencies {
     // Use JUnit test framework.
